@@ -33,6 +33,7 @@
       left: 0;
       width: 100%;
       height: 180px;
+      pointer-events: none;
     }
 
     header img {
@@ -64,13 +65,20 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: 500;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
       border: 2px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
     }
 
-    header a:hover {
+    header a:hover,
+    header a:focus-visible {
       background: rgba(255, 255, 255, 0.3);
       border-color: rgba(255, 255, 255, 0.5);
+      transform: scale(1.05);
+    }
+
+    header a:active {
+      transform: scale(0.98);
     }
 
     section {
